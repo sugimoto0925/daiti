@@ -1,3 +1,5 @@
+/*　共通　*/
+
 img {
   max-width: 100%;
 }
@@ -6,6 +8,8 @@ p {
   font-size: 6px;
   line-height: 1.5;
 }
+
+/* メイン */
 
 .main-Arshive {
   display: flex;
@@ -49,14 +53,16 @@ p {
   text-align: center;
   color: white;
   background-color: rgba(0,0,0,0.6);
-  padding: 10px 20px;
+  padding: 15px 35px;
   white-space: nowrap;/* 改行させない */
-  font-weight: bold;
   }
 
   .archive-h2, .new-h2 {
-    font-size: 10px;
-    margin-bottom: 3px;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .archive-p, .new-p {
+    font-size: 14px;
   }
 
   .fashion-style {
@@ -66,8 +72,8 @@ p {
 
   .fashion-style > img {
     /* 写真サイズ調整 */
-    width: 100%;
-    height: 230px;
+    width: 1600px;
+    height: 520px;
     object-fit: cover;
   }
 
@@ -85,22 +91,23 @@ p {
   }
 
   .fashion-h2 {
-    font-size: 10px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
   }
   .fashion-p {
-    margin-bottom: 10px;
+    font-size: 14px;
+    margin-bottom: 30px;
   }
 
   .Read {
-    font-size: 6px;
+    font-size: 12px;
     border: 1px solid black;
-    padding: 5px 15px ;
+    padding: 15px 35px ;
   }
 
   #Catalog {
-    margin: 30px 0 30px 0;
+    margin: 60px 0 30px 0;
   }
 
   .catalog {
@@ -111,20 +118,24 @@ p {
   }
 
   .catalog-img {
-    width: 35%;
+    width: 500px;
   }
 
   .catalog-h2 {
     text-align: center;
-    font-size: 10px;
+    font-size: 24px;
     font-weight: bold;
   }
    .catalog-mozi > p {
+    font-size: 14px;
+    width: 496px;
+    max-width: 100%;
     margin: 10px;
+    text-align: left;
    }
 
    #Antique {
-    margin: 50px 0 30px 0;
+    margin: 60px 0 30px 0;
    }
 
    .antique {
@@ -135,39 +146,46 @@ p {
    }
 
    .antique-img {
-    width: 35%;
+    width: 500px;
    }
-
    .antique-mozi {
-   text-align: center;
+    text-align: center;
    }
 
    .antique-h2 {
-    font-size: 10px;
+    font-size: 24px;
     font-weight: bold;
    }
 
    .antique-mozi > p {
+    font-size: 14px;
+    width: 496px;
+    max-width: 100%;
     margin: 10px;
+    text-align: left;
+
    }
 
    .antique-read {
-    font-size: 6px;
+    font-size: 12px;
     border: 1px solid black;
-    padding: 5px 15px ;
+    padding: 15px 35px ;
    }
 
    .Footer {
     background-color: #0d0d0d;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 0;
    }
 
    .footer-title {
     display: inline-block;/* ブロック要素にする */
     color: white;
-    width: 250px;
-    height: 250px;
-    padding: 10px;
+    width: 100%;
+    /* 上下中央 */
+    align-content:center;
    }
 
    .footer-img {
@@ -179,7 +197,114 @@ p {
     margin-bottom: 10px;
    }
    .title-list {
-    list-style: disc;
     font-size: 6px;
     line-height: 1.5;
    }
+
+   .copy {
+    font-size: 12px;
+    text-align: center;
+    margin: 32px 0 30px 0;
+   }
+
+   @media screen and (max-width: 896px) {
+
+    .main-message > h2 {
+      font-size: 24px;
+      width: 294px;
+      margin: 80px auto 23px;
+    }
+    .main-message > p {
+      font-size: 14px;
+      width: 330px;
+      margin: 0 auto 35px;
+    }
+
+    .main-Arshive {
+      flex-direction: column;
+      row-gap: 30px;
+      margin-left: 19px;
+      margin-right: 19px;
+    }
+    .Archive {
+      margin: 0 auto;
+      width: 337.5px;
+    }
+
+    .New {
+      margin: 0 auto;
+      width: 337.5px;
+    }
+
+    .fashion-p {
+      white-space: normal;
+    }
+
+    .catalog {
+      flex-direction: column;
+    }
+    .catalog-img {
+      width: 337.5px;
+    }
+    .catalog-mozi {
+      width: 331px;
+      margin-top: 60px;
+    }
+    .catalog-h2 {
+      margin-bottom: 43px;
+    }
+
+    .antique {
+      flex-direction: column;
+   }
+   .antique-img {
+    width: 337.5px;
+   }
+   .antique-mozi {
+    width: 331px;
+    margin-bottom: 60px;
+   }
+   .antique-h2 {
+    margin-bottom: 43px;
+   }
+   .antique-a {
+    margin-top: 52px;
+   }
+
+   .Footer {
+    flex-direction: column;
+    width: 373px;
+    height: 456px;
+    margin: 0 auto;
+   }
+   .footer-title {
+    margin: 0 auto;
+    text-align: center;
+   }
+   .footer-img {
+    width: 120px;
+    height: 40px;
+    margin-bottom: 36px;
+   }
+   h3 {
+    font-size: 16px;
+    text-align: left;
+    margin-left: 21px;
+   }
+   .title-list {
+    font-size: 12px;
+    line-height: 2;
+    text-align: left;
+    margin-left: 21px;
+    margin-bottom: 35px;
+   }
+   .footer-title > p {
+    font-size: 12px;
+    width: 331px;
+    line-height: 2;
+    text-align: left;
+    margin-left: 21px;
+    margin-bottom: 35px;
+   }
+
+  }
